@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tile memory game</title>
+    <script src="libraries/p5.js"></script>
+    <script src="libraries/p5.dom.js"></script>
+    <script src="libraries/p5.sound.js"></script>
+    <script src="sketch.js"></script>
+    <script src="cell.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav class="outer-col-1">
+      <h3 id="controlHeader">Controls</h3>
+      <ul>
+        <a href="index.html"><li id="homeButton">Home</li></a>
+      </ul>
+      <button id="revealSketch" type="button" name="button" onclick="revealSketch()">Show Tiles</button>
+      <button id="startGame" type="button" name="button" onclick="hideAll()">Play Game</button>
+      <button id="restartGame" type="button" name="button" onclick="setup()">Restart Game</button>
+    </nav>
+    <div class="outer-col-2">
+    	<header id="headerGame1">
+        <h2 class="gameHeader">Game Name</h2>
+        <div class="timerContainer">
+          <div class="">
+            Time Left:
+          </div>
+          <div id="timer">
+            30
+          </div>
+        </div>
+        <div class="uopLogoContainer">
+          <img class="uopLogo" src="images/uop.jpg" alt="University of Portsmouth logo">
+        </div>
+      </header>
+      <div id="modal-containerLostGame">
+        <div id="modalLostGame">
+          <span onclick="closeModalLost()" class="closeModal">&times;</span>
+          <p>Unlucky! You made three incorrect selections. Close this box and click restart game to try again.</p>
+        </div>
+      </div>
+      <div id="modal-containerTimeUp">
+        <div id="modalTimeUp">
+          <span onclick="closeModalTimeUp()" class="closeModal">&times;</span>
+          <p>Times up! You ran out of time. Close this box and click restart game to try again.</p>
+        </div>
+      </div>
+      <div id="modal-containerWonGame">
+        <div id="modalWonGame">
+          <span onclick="closeModalWon()" class="closeModal">&times;</span>
+          <p>Well done! You selected all the correct squares. Close this box and click restart game to play again.</p>
+        </div>
+      </div>
+      <div class="inner-row">
+        <div class="inner-col">
+        <article id="sketch-holder"></article>
+        <aside id="asideGame1">
+          <h3>How To Play:</h3>
+          <div class="howToContainer">
+            <p>The aim of this game is to remember where all the green tiles are. The tiles will be hidden, you need to click on the squares that you think are hiding a green tile.</p>
+            <p>1: Click Show tiles.</p>
+            <p>2: Memorize where all the green dots are.</p>
+            <p>3: Click play game.</p>
+            <p>4: Click the blank squares where the green tiles are.</p>
+            <p>5: Three wrong answers and the game is over.</p>
+            <p>6: Click restart to play again.</p>
+          </div>
+        </aside>
+        </div>
+      </div>
+      <footer id="footerGame1">Footer</footer>
+    </div>
+  </body>
+</html>

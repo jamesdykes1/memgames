@@ -1,0 +1,340 @@
+@font-face {
+font-family: "FredokaOne-Regular";
+src: url("fonts/FredokaOne-Regular.ttf");
+}
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    margin: 0;
+    background-image: url(images/dots.jpg);
+    font-family: FredokaOne-Regular;
+    font-weight: 50;
+  }
+  .outer-col-1 {
+    background: #E0E3F9;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    padding: 50px 15px;
+    justify-content: space-evenly;
+  }
+  .outer-col-2 {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+  }
+  .inner-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .inner-col {
+    flex: 4;
+  }
+  .inner-row article {
+    min-height: 60vh;
+  }
+  .inner-row aside {
+    flex: 1;
+  }
+
+  #asideGame1{
+    background-color: #2F394D;
+    color: #fff;
+    display: block;
+    width: 45%;
+    float: right;
+    height: 100%;
+    font-family: monospace;
+    font-size: 18px;
+  }
+
+  #headerGame1{
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+  }
+
+  #footerGame1{
+      background-color: #fff;
+  }
+
+  header, footer {
+    height: 20vh;
+  }
+  header, footer, article, nav {
+    padding: 1em;
+  }
+
+
+#sketch-holder{
+  position: relative;
+  visibility: hidden;
+  width: 50%;
+  float: left;
+}
+
+aside{
+  padding: 1% 2%;
+}
+
+.columnLeft, .columnRight {
+    float: left;
+    width: 15%;
+    padding: 10px;
+    height: 115vh;
+}
+
+.columnMiddle{
+  float: left;
+  width: 70%;
+  height: 300px;
+  text-align: center;
+}
+
+.row {
+    content: "";
+    display: table;
+    clear: both;
+    width: 100%;
+}
+
+.inner-row1{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  padding: 4% 1%;
+  margin: 4% 0%;
+  background-color: rgba(0, 0, 255, 0.1);
+  border-radius: 25px;
+  border: 1px solid #2F394D;
+}
+
+.inner-row2{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  padding: 4% 1%;
+  margin: 4% 0%;
+  background-color: rgba(0, 255, 0, 0.1);
+  border-radius: 25px;
+  border: 1px solid #136F63;
+}
+
+.inner-row3{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  padding: 4% 1%;
+  margin: 4% 0%;
+  background-color: rgba(255, 0, 0, 0.1);
+  border-radius: 25px;
+  border: 1px solid #E5625E;
+}
+
+.inner-col1{
+
+}
+
+.inner-col2{
+  background-color: #2F394D;
+  border-radius: 25px;
+  padding: 5%;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.inner-col4{
+  background-color: #136F63;
+  border-radius: 25px;
+  padding: 5%;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.inner-col6{
+  background-color: #E5625E;
+  border-radius: 25px;
+  padding: 5%;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+h1{
+  font-size: 72px;
+  text-shadow: 2px 2px 2px #ccc;
+  margin: 5px;
+}
+
+h2{
+  font-size: 32px;
+}
+
+.gameHeader{
+  width: 60%;
+}
+
+h3{
+  font-size: 26px;
+}
+
+#controlHeader{
+  margin-bottom: 0;
+}
+
+.playButton{
+  font-size: 22px;
+  text-decoration: none;
+  display: block;
+  padding: 4px;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #000;
+  border: 1px solid #000;
+}
+
+a{
+  text-decoration: none;
+}
+
+.playButton:hover{
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+h3{
+  margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+}
+
+#homeButton{
+  text-decoration: none;
+  font-size: 22px;
+  pointer-events: all;
+  cursor: pointer;
+  background-color: #30394C;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4), 0 2px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 12% 0%;
+}
+
+#homeButton a{
+  color: #fff;
+}
+
+#revealSketch{
+  width: 90%;
+  font-size: 22px;
+  margin: 10px 0px;
+  height: 15%;
+  pointer-events: all;
+  cursor: pointer;
+  background-color: #30394C;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4), 0 2px 2px rgba(0, 0, 0, 0.2);
+  font-family: FredokaOne-Regular;
+  font-weight: 50;
+}
+
+#startGame{
+  width: 90%;
+  font-size: 22px;
+  margin: 10px 0px;
+  height: 15%;
+  pointer-events: none;
+  cursor: default;
+  background-color: #E0E4F8;
+  color: #cccccc;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4), 0 2px 2px rgba(0, 0, 0, 0.2);
+  font-family: FredokaOne-Regular;
+  font-weight: 50;
+}
+
+#restartGame{
+  width: 90%;
+  font-size: 22px;
+  margin: 10px 0px;
+  height: 15%;
+  pointer-events: none;
+  cursor: default;
+  background-color: #E0E4F8;
+  color: #cccccc;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4), 0 2px 2px rgba(0, 0, 0, 0.2);
+  font-family: FredokaOne-Regular;
+  font-weight: 50;
+}
+
+#modal-containerLostGame, #modal-containerWonGame, #modal-containerTimeUp{
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+#modalLostGame, #modalWonGame, #modalTimeUp{
+  background-color: #fefefe;
+  margin: 2% auto; /* 15% from the top and centered */
+  padding: 15px;
+  border: 1px solid #888;
+  width: 65%; /* Could be more or less, depending on screen size */
+}
+
+#modalLostGame, #modalTimeUp{
+  color: red;
+}
+
+#modalWonGame{
+  color: green;
+}
+
+.closeModal {
+    color: #ff0000;
+    float: right;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.closeModal:hover,
+.closeModal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.uopLogoContainer{
+  float: right;
+}
+
+.uopLogo{
+  width: 100px;
+}

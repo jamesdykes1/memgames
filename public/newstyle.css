@@ -1,0 +1,422 @@
+@font-face {
+font-family: "FredokaOne-Regular";
+src: url("fonts/FredokaOne-Regular.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    background-image: url(images/bk7.png);
+    background-size: 100%;
+    background-repeat: repeat;
+    font-family: FredokaOne-Regular;
+    font-weight: 50;
+    background-color: rgba(0, 0, 255, 0.8)
+}
+
+.container{
+  background-color: #fff;
+  justify-content: center;
+}
+
+.homeTitle{
+  display: flex;
+  background-image: url(images/dots.jpg);
+  padding: 1% 0%;
+  border-bottom: solid 2px #000;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#homeText{
+  margin-bottom: 0;
+}
+
+#titleGame1{
+  color: #fff;
+  background-color: #3C50FC;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#navGame1{
+  align-items: center;
+  justify-content: space-evenly;
+  margin-right: 2%;
+  margin-bottom: 10%;
+}
+
+#homeButton1{
+  text-decoration: none;
+  font-size: 22px;
+  pointer-events: all;
+  cursor: pointer;
+  background-color: #3c50fc;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4), 0 2px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 10px 0px;
+  height: 15%;
+  width: 100%;
+}
+
+#revealSketch{
+  width: 100%;
+  font-size: 22px;
+  margin: 10px 0px;
+  height: 15%;
+  pointer-events: all;
+  cursor: pointer;
+  background-color: #3c50fc;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4), 0 2px 2px rgba(0, 0, 0, 0.2);
+  font-family: FredokaOne-Regular;
+  font-weight: 50;
+}
+
+#startGame1{
+  width: 100%;
+  font-size: 22px;
+  margin: 10px 0px;
+  height: 15%;
+  pointer-events: none;
+  cursor: default;
+  background-color: #E0E4F8;
+  color: #cccccc;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4), 0 2px 2px rgba(0, 0, 0, 0.2);
+  font-family: FredokaOne-Regular;
+  font-weight: 50;
+}
+
+#restartGame1{
+  width: 100%;
+  font-size: 22px;
+  margin: 10px 0px;
+  height: 15%;
+  pointer-events: none;
+  cursor: default;
+  background-color: #E0E4F8;
+  color: #cccccc;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4), 0 2px 2px rgba(0, 0, 0, 0.2);
+  font-family: FredokaOne-Regular;
+  font-weight: 50;
+}
+
+#statsRow{
+}
+
+.timerContainer{
+  font-size: 32px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+}
+
+.scoreContainer{
+  font-size: 32px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+}
+
+#modal-containerLostGame, #modal-containerWonGame, #modal-containerTimeUp, #modal-containerWonGame3, #modal-containerWonGame2{
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+#modalLostGame, #modalWonGame, #modalTimeUp, #modalWonGame3, #modalWonGame2{
+  background-color: #fefefe;
+  margin: 2% auto; /* 15% from the top and centered */
+  padding: 15px;
+  border: 1px solid #888;
+  width: 65%; /* Could be more or less, depending on screen size */
+}
+
+#modalLostGame, #modalTimeUp{
+  color: red;
+}
+
+#modalWonGame{
+  color: green;
+}
+
+.closeModal {
+    color: #ff0000;
+    float: right;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.closeModal:hover,
+.closeModal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.howToContainer{
+  background-color: #3c50fc;
+  color: #fff;
+  display: block;
+  font-family: monospace;
+  font-size: 18px;
+  padding: 1% 2%;
+}
+
+.spacer{
+  margin: 50px;
+}
+
+#defaultCanvas0{
+  padding: 2%;
+  border: 2px dotted #3c50fc;
+  margin: 0% 25%;
+}
+
+#titleGame3{
+  color: #fff;
+  background-color: #FC3D49;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#homeButton3{
+  text-decoration: none;
+  font-size: 22px;
+  pointer-events: all;
+  cursor: pointer;
+  background-color: #FC3D49;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4), 0 2px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 10px 0px;
+  height: 15%;
+  width: 100%;
+}
+
+#startGame3{
+  width: 100%;
+  font-size: 22px;
+  margin: 10px 0px;
+  height: 15%;
+  background-color: #FC3D49;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4), 0 2px 2px rgba(0, 0, 0, 0.2);
+  font-family: FredokaOne-Regular;
+  font-weight: 50;
+}
+
+#navGame3{
+  align-items: center;
+  justify-content: space-evenly;
+  margin-right: 2%;
+  margin-bottom: 10%;
+}
+
+.game3Buttons{
+  align-items: center;
+}
+
+#matchGame3{
+  font-size: 6vw;
+  margin: 10px 0px;
+  background-color: #53FD58;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4), 0 2px 2px rgba(0, 0, 0, 0.2);
+  font-family: FredokaOne-Regular;
+  font-weight: 50;
+  padding: 5%;
+  width: 100%;
+  display: block;
+}
+
+.howToContainer3{
+  background-color: #FC3D49;
+  color: #fff;
+  display: block;
+  font-family: monospace;
+  font-size: 18px;
+  padding: 1% 2%;
+}
+
+#gameSpace1Container{
+  border: 1px solid #3c50fc;
+  margin-right: 0.5px;
+}
+
+#gameSpace3Container{
+  margin-top: 1%;
+  margin-bottom: 3%;
+  margin-right: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#gameSpace3{
+  border: 2px dotted #FC3D49;
+  padding: 6%;
+  margin-left: 5%;
+}
+
+#shapeImage{
+  width: 100%;
+  height: auto;
+}
+
+#titleGame2{
+  color: #fff;
+  background-color: #53FD58;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#navGame2{
+  align-items: center;
+  justify-content: space-evenly;
+  margin-right: 2%;
+  margin-bottom: 10%;
+}
+
+#homeButton2{
+  text-decoration: none;
+  font-size: 22px;
+  pointer-events: all;
+  cursor: pointer;
+  background-color: #53FD58;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4), 0 2px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 10px 0px;
+  height: 15%;
+  width: 100%;
+}
+
+#startGame2{
+  width: 100%;
+  font-size: 22px;
+  margin: 10px 0px;
+  height: 15%;
+  background-color: #53FD58;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4), 0 2px 2px rgba(0, 0, 0, 0.2);
+  font-family: FredokaOne-Regular;
+  font-weight: 50;
+}
+
+#restartGame2{
+  width: 100%;
+  font-size: 22px;
+  margin: 10px 0px;
+  height: 15%;
+  background-color: #53FD58;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4), 0 2px 2px rgba(0, 0, 0, 0.2);
+  font-family: FredokaOne-Regular;
+  font-weight: 50;
+}
+
+.howToContainer2{
+  background-color: #00cc00;
+  color: #fff;
+  display: block;
+  font-family: monospace;
+  font-size: 18px;
+  padding: 1% 2%;
+}
+
+#controlWord{
+  visibility: hidden;
+  font-size: 8vw;
+}
+
+#controlWordContainer{
+  border: solid 1px #3d50fc;
+  padding: 2% 5%;
+  margin-bottom: 2%;
+  border-radius: 5px;
+}
+
+#variableWord{
+  visibility: hidden;
+  font-size: 8vw;
+}
+
+#variableWordContainer{
+  border: solid 1px #fc3d49;
+  padding: 2% 5%;
+  margin-bottom: 2%;
+  border-radius: 5px;
+}
+
+#matchButton{
+  width: 97%;
+  font-size: 7vw;
+  margin-bottom: 5%;
+  background-color: #3C50FC;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4), 0 2px 2px rgba(0, 0, 0, 0.2);
+  font-family: FredokaOne-Regular;
+  font-weight: 50;
+}
+
+#noMatchButton{
+  width: 97%;
+  font-size: 7vw;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  background-color: #FC3D49;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4), 0 2px 2px rgba(0, 0, 0, 0.2);
+  font-family: FredokaOne-Regular;
+  font-weight: 50;
+}
+
+#gameSpace2Container{
+  display: flex;
+  align-items: center;
+  margin-top: 1%;
+}
+
+#game2Buttons{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}

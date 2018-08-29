@@ -1,0 +1,62 @@
+body{
+  font-family: "FredokaOne-Regular";
+}
+
+.col-sm-3{
+  padding: 0;
+}
+
+.col-sm-9{
+  padding: 0;
+}
+
+.row{
+  margin-left: 0;
+  padding-right: 0;
+}
+
+.container{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.containerGame1{
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin: 0% 15%;
+}
+
+h1{
+  font-family: "FredokaOne-Regular";
+  font-size: 4em;
+  margin-top: 0;
+  margin-bottom: 5%;
+}
+
+h2{
+  font-family: "FredokaOne-Regular";
+  font-size: 2em;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.col-sm-12{
+  padding: 0;
+}
+
+.col-md-12{
+  padding-left: 0;
+}
+
+ul{
+  padding-left: 0;
+}
+
+#homeText{
+  margin-bottom: 0;
+}

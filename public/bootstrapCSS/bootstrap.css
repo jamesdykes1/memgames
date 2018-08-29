@@ -361,7 +361,6 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: inherit;
   font-weight: 500;
   line-height: 1.2;
   color: inherit;
@@ -623,8 +622,6 @@ pre code {
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
 }
 
 .col {

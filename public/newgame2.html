@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Memory Games</title>
+    <script src="libraries/p5.js"></script>
+    <script src="libraries/p5.dom.js"></script>
+    <script src="libraries/p5.sound.js"></script>
+    <script src="stroop.js"></script>
+    <link rel="stylesheet" href="newstyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrapCSS/custom.css">
+  </head>
+  <body>
+  <div class="containerGame1">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 id="titleGame2">COLOUR COMBO</h1>
+      </div>
+    </div>
+    <div class="row" id="navGame2">
+      <div class="col-md-4">
+        <ul>
+          <a href="index.html"><li id="homeButton2">Home</li></a>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <button id="startGame2" type="button" name="button" onclick="startTheTimer()">Play</button>
+      </div>
+      <div class="col-md-4">
+        <button id="restartGame2" type="button" name="button" onclick="restartGame()">Restart</button>
+      </div>
+    </div>
+    <div class="row" id="statsRow">
+      <div class="col-md-6">
+        <div class="scoreContainer">
+          <div class="scoreText">
+            Your Score:&nbsp;
+          </div>
+          <div id="score">
+            0
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="timerContainer">
+          <div class="timeLeftText">
+            Time Left:&nbsp;
+          </div>
+          <div id="timer">
+            20
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="gameSpace2Container">
+      <div class="col-md-6" >
+        <div id="gameSpace1">
+            <div id="controlWordContainer">
+                <div id="controlWord"></div>
+            </div>
+            <div id="variableWordContainer">
+              <div id="variableWord"></div>
+            </div>
+          </div>
+        </div>
+          <div class="col-md-6" id="game2Buttons">
+            <button id="matchButton" type="button" name="button" onclick="userWordsMatch()">Match</button>
+            <button id="noMatchButton" type="button" name="button" onclick="userNoMatch()">Different</button>
+        <div id="modal-containerWonGame2">
+          <div id="modalWonGame">
+            <span onclick="closeModalWon()" class="closeModal">&times;</span>
+            <p>Well done! Close this box and click restart game to play again.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="howToContainer2">
+          <div class="textSpace2">
+          <h3>How To Play:</h3>
+          <p>The aim of this game is to match the text in the blue box with the ink colour in the red box.
+            <p>1. Click the play button</p>
+            <p>2. If the text and colour match, click the match button.</p>
+            <p>3. If the text and colour DO NOT match, click the different button.</p>
+            <p>4. You have 20 seconds to score as many points as possible.</p>
+            <p>5. To play again click restart and play when you are ready.</p>
+        </div>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+  </div>
+  <script type="text/javascript">
+    generateRandomNums();
+  </script>
+  </body>
+  </html>

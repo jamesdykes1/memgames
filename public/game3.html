@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Memory Games</title>
+    <script src="nback.js"></script>
+    <link rel="stylesheet" href="newstyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrapCSS/custom.css">
+  </head>
+  <body>
+  <div class="containerGame1">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 id="titleGame3">N-BACK</h1>
+      </div>
+    </div>
+    <div class="row" id="navGame3">
+      <div class="col-md-6">
+        <ul>
+          <a href="index.html"><li id="homeButton3">Home</li></a>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <button id="startGame3" type="button" name="button" onclick="startGame3()">Play</button>
+      </div>
+    </div>
+    <div class="row" id="statsRow">
+      <div class="col-md-6">
+        <div class="scoreContainer">
+          <div class="scoreText">
+            Your Score:&nbsp;
+          </div>
+          <div id="score">
+            0
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="timerContainer">
+          <div class="timeLeftText">
+            Next Shape In:&nbsp;
+          </div>
+          <div id="timer">
+            5
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="gameSpace3Container">
+      <div class="col-md-6">
+        <div id="gameSpace3">
+          <img id="shapeImage" src="" alt="">
+        </div>
+      </div>
+        <div class="col-md-6">
+        <div class="game3Buttons">
+          <button onclick="checkArray()" id="matchGame3" type="button" name="button">Match</button>
+        </div>
+        <div id="modal-containerWonGame3">
+          <div id="modalWonGame3">
+            <span onclick="closeModalWon()" class="closeModal">&times;</span>
+            <p>Well done! You completed this game. Close this box and click start to play again.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="howToContainer3">
+          <h3>How To Play:</h3>
+          <p>The aim of this game is to memorise the shape shown 2 previous to find a match.</p>
+          <p>1. Click the play button.</p>
+          <p>2. Memorise the shapes that flash on the screen.</p>
+          <p>3. If the current shape matches the shape shown 2 previous click the match button.</p>
+          <p>4. The game is won when you score 5 points.</p>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+  </div>
+  </body>
+  </html>

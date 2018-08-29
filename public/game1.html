@@ -2,75 +2,104 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Tile memory game</title>
+    <title>Memory Games</title>
     <script src="libraries/p5.js"></script>
     <script src="libraries/p5.dom.js"></script>
     <script src="libraries/p5.sound.js"></script>
     <script src="sketch.js"></script>
     <script src="cell.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="newstyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrapCSS/custom.css">
   </head>
   <body>
-    <nav class="outer-col-1">
-      <h3 id="controlHeader">Controls</h3>
-      <ul>
-        <a href="index.html"><li id="homeButton">Home</li></a>
-      </ul>
-      <button id="revealSketch" type="button" name="button" onclick="revealSketch()">Show Tiles</button>
-      <button id="startGame" type="button" name="button" onclick="hideAll()">Play Game</button>
-      <button id="restartGame" type="button" name="button" onclick="setup()">Restart Game</button>
-    </nav>
-    <div class="outer-col-2">
-    	<header id="headerGame1">
-        <h2 class="gameHeader">Game Name</h2>
+  <div class="containerGame1">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 id="titleGame1">TILE TIMEOUT</h1>
+      </div>
+    </div>
+    <div class="row" id="navGame1">
+      <div class="col-md-3">
+        <ul>
+          <a href="index.html"><li id="homeButton1">Home</li></a>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <button id="revealSketch" type="button" name="button" onclick="revealSketch()">Show Tiles</button>
+      </div>
+      <div class="col-md-3">
+        <button id="startGame1" type="button" name="button" onclick="hideAll()">Play</button>
+      </div>
+      <div class="col-md-3">
+        <button id="restartGame1" type="button" name="button" onclick="setup()">Restart</button>
+      </div>
+    </div>
+    <div class="row" id="statsRow">
+      <div class="col-md-6">
+        <div class="scoreContainer">
+          <div class="scoreText">
+            Your Score:&nbsp;
+          </div>
+          <div id="score">
+            0
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
         <div class="timerContainer">
-          <div class="">
-            Time Left:
+          <div class="timeLeftText">
+            Time Left:&nbsp;
           </div>
           <div id="timer">
-            30
+            15
           </div>
         </div>
-        <div class="uopLogoContainer">
-          <img class="uopLogo" src="images/uop.jpg" alt="University of Portsmouth logo">
-        </div>
-      </header>
-      <div id="modal-containerLostGame">
-        <div id="modalLostGame">
-          <span onclick="closeModalLost()" class="closeModal">&times;</span>
-          <p>Unlucky! You made three incorrect selections. Close this box and click restart game to try again.</p>
-        </div>
       </div>
-      <div id="modal-containerTimeUp">
-        <div id="modalTimeUp">
-          <span onclick="closeModalTimeUp()" class="closeModal">&times;</span>
-          <p>Times up! You ran out of time. Close this box and click restart game to try again.</p>
-        </div>
-      </div>
-      <div id="modal-containerWonGame">
-        <div id="modalWonGame">
-          <span onclick="closeModalWon()" class="closeModal">&times;</span>
-          <p>Well done! You selected all the correct squares. Close this box and click restart game to play again.</p>
-        </div>
-      </div>
-      <div class="inner-row">
-        <div class="inner-col">
-        <article id="sketch-holder"></article>
-        <aside id="asideGame1">
-          <h3>How To Play:</h3>
-          <div class="howToContainer">
-            <p>The aim of this game is to remember where all the green tiles are. The tiles will be hidden, you need to click on the squares that you think are hiding a green tile.</p>
-            <p>1: Click Show tiles.</p>
-            <p>2: Memorize where all the green dots are.</p>
-            <p>3: Click play game.</p>
-            <p>4: Click the blank squares where the green tiles are.</p>
-            <p>5: Three wrong answers and the game is over.</p>
-            <p>6: Click restart to play again.</p>
-          </div>
-        </aside>
-        </div>
-      </div>
-      <footer id="footerGame1">Footer</footer>
     </div>
+    <div class="row" id="gameSpace1Container">
+      <div class="col-md-12" >
+        <div class="spacer">
+        </div>
+        <div id="gameSpace1">
+        </div>
+        <div class="spacer">
+        </div>
+        <div id="modal-containerLostGame">
+          <div id="modalLostGame">
+            <span onclick="closeModalLost()" class="closeModal">&times;</span>
+            <p>Unlucky! You made three incorrect selections. Close this box and click restart game to try again.</p>
+          </div>
+        </div>
+        <div id="modal-containerTimeUp">
+          <div id="modalTimeUp">
+            <span onclick="closeModalTimeUp()" class="closeModal">&times;</span>
+            <p>Times up! You ran out of time. Close this box and click restart game to try again.</p>
+          </div>
+        </div>
+        <div id="modal-containerWonGame">
+          <div id="modalWonGame">
+            <span onclick="closeModalWon()" class="closeModal">&times;</span>
+            <p>Well done! You selected all the correct squares. Close this box and click restart game to play again.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="howToContainer">
+          <h3>How To Play:</h3>
+          <p>The aim of this game is to memorise where the green tiles are. Once hidden, select where the tiles were before the timer ends!</p>
+          <p>1: Click Show tiles.</p>
+          <p>2: Memorize where all the green dots are.</p>
+          <p>3: Click play game.</p>
+          <p>4: Click the blank squares where the green tiles are.</p>
+          <p>5: Three wrong answers and the game is over.</p>
+          <p>6: Click restart to play again.</p>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+  </div>
   </body>
-</html>
+  </html>

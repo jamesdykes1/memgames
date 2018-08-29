@@ -12,22 +12,36 @@ src: url("fonts/FredokaOne-Regular.ttf");
     min-height: 100vh;
     flex-direction: row;
     margin: 0;
-    background-image: url(images/dots.jpg);
+    background-image: url(images/bk7.png);
+    background-size: 100%;
+    background-repeat: repeat;
     font-family: FredokaOne-Regular;
     font-weight: 50;
   }
-  .outer-col-1 {
-    background: #E0E3F9;
+
+  .bodyGame1{
+    background-color: #fff;
+    background-image: none;
+  }
+
+  li:hover{
+    text-decoration: none;
+  }
+
+  #outer-col-1Game1 {
+    background: #3C50FC;
     display: flex;
     flex: 1;
     flex-wrap: wrap;
     padding: 50px 15px;
     justify-content: space-evenly;
+    box-shadow: inset -2px 0px 7px #2F394D;
+    height: 100vh;
+    background-image: url(images/bk7.png);
   }
   .outer-col-2 {
     display: flex;
     flex-direction: column;
-    width: 85%;
   }
   .inner-row {
     display: flex;
@@ -35,6 +49,8 @@ src: url("fonts/FredokaOne-Regular.ttf");
   }
   .inner-col {
     flex: 4;
+    background-color: #fff;
+    display: flex;
   }
   .inner-row article {
     min-height: 60vh;
@@ -44,31 +60,44 @@ src: url("fonts/FredokaOne-Regular.ttf");
   }
 
   #asideGame1{
-    background-color: #2F394D;
+    background-color: #3c50fc;
     color: #fff;
     display: block;
     width: 45%;
     float: right;
-    height: 100%;
     font-family: monospace;
     font-size: 18px;
+    height: 100vh;
   }
 
   #headerGame1{
-      background-color: #fff;
+      color: #fff;
+      background-color: #3C50FC;
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #fff;
+      padding: 0px 10px;
   }
 
-  #footerGame1{
-      background-color: #fff;
-  }
-
-  header, footer {
+  header{
     height: 20vh;
   }
   header, footer, article, nav {
     padding: 1em;
+  }
+
+  .col-sm-12{
+    padding: 0;
+  }
+
+  footer{
+    background-color: #00004d;
+    color: #fff;
+  }
+
+  .homeFooter{
+    background-color: #000;
   }
 
 
@@ -84,17 +113,30 @@ aside{
 }
 
 .columnLeft, .columnRight {
-    float: left;
-    width: 15%;
-    padding: 10px;
-    height: 115vh;
 }
 
 .columnMiddle{
   float: left;
-  width: 70%;
+  width: 100%;
   height: 300px;
   text-align: center;
+}
+
+.homeTitle{
+  display: flex;
+  background-image: url(images/dots.jpg);
+  padding: 1% 0%;
+  border-bottom: solid 2px #000;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.homeTitle H1{
+  flex-wrap: wrap;
+}
+
+.homeTitle H2{
+  flex-wrap: wrap;
 }
 
 .row {
@@ -102,6 +144,7 @@ aside{
     display: table;
     clear: both;
     width: 100%;
+    margin-left: 0;
 }
 
 .inner-row1{
@@ -109,11 +152,8 @@ aside{
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-evenly;
-  padding: 4% 1%;
-  margin: 4% 0%;
-  background-color: rgba(0, 0, 255, 0.1);
-  border-radius: 25px;
-  border: 1px solid #2F394D;
+  padding: 15% 1%;
+  background-color: rgba(0, 0, 255, 0.8);
 }
 
 .inner-row2{
@@ -121,11 +161,8 @@ aside{
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-evenly;
-  padding: 4% 1%;
-  margin: 4% 0%;
-  background-color: rgba(0, 255, 0, 0.1);
-  border-radius: 25px;
-  border: 1px solid #136F63;
+  padding: 15% 1%;
+  background-color: rgba(0, 255, 0, 0.8);
 }
 
 .inner-row3{
@@ -133,53 +170,77 @@ aside{
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-evenly;
-  padding: 4% 1%;
-  margin: 4% 0%;
-  background-color: rgba(255, 0, 0, 0.1);
-  border-radius: 25px;
-  border: 1px solid #E5625E;
+  padding: 15% 1%;
+  background-color: rgba(255, 0, 0, 0.8);
 }
 
 .inner-col1{
+  color: #fff;
+  width: 49%;
+}
 
+.inner-col1 h3, .inner-col3 h3, .inner-col5 h3{
+  font-size: 4em;
+}
+
+.inner-col1 p, .inner-col3 p, .inner-col5 p{
+  font-size: 2em;
+  margin: 0% 10%;
 }
 
 .inner-col2{
-  background-color: #2F394D;
-  border-radius: 25px;
-  padding: 5%;
+  display: flex;
+  align-items: center;
+  width: 49%;
+}
+
+.inner-col2 a, .inner-col4 a, .inner-col6 a{
+  width: 99%;
+}
+
+.inner-col2 li, .inner-col4 li, .inner-col6 li{
+  font-size: 3em;
+}
+
+.inner-col3{
   color: #fff;
-  border: 2px solid #fff;
+  width: 49%;
 }
 
 .inner-col4{
-  background-color: #136F63;
-  border-radius: 25px;
-  padding: 5%;
+  display: flex;
+  align-items: center;
+  width: 49%;
+}
+
+.inner-col5{
   color: #fff;
-  border: 2px solid #fff;
+  width: 49%;
 }
 
 .inner-col6{
-  background-color: #E5625E;
-  border-radius: 25px;
-  padding: 5%;
-  color: #fff;
-  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  width: 49%;
 }
 
+
+
 h1{
+  color: #000;
   font-size: 72px;
-  text-shadow: 2px 2px 2px #ccc;
+  text-shadow: 1px 1px 1px #000;
   margin: 5px;
+  font-family: "FredokaOne-Regular";
 }
 
 h2{
-  font-size: 32px;
+  color: #000;
 }
 
 .gameHeader{
-  width: 60%;
+  float: left;
+  font-size: 3em;
 }
 
 h3{
@@ -188,6 +249,8 @@ h3{
 
 #controlHeader{
   margin-bottom: 0;
+  color: #fff;
+  font-size: 2em;
 }
 
 .playButton{
@@ -205,10 +268,15 @@ a{
   text-decoration: none;
 }
 
+a:hover{
+  text-decoration: none;
+}
+
 .playButton:hover{
   background-color: #000;
   color: #fff;
   border: 1px solid #fff;
+  text-decoration: none;
 }
 
 h3{
@@ -222,12 +290,12 @@ ul {
     width: 90%;
 }
 
-#homeButton{
+#homeButton1{
   text-decoration: none;
   font-size: 22px;
   pointer-events: all;
   cursor: pointer;
-  background-color: #30394C;
+  background-color: #3c50fc;
   color: #fff;
   border-radius: 5px;
   border: 1px solid #fff;
@@ -247,7 +315,7 @@ ul {
   height: 15%;
   pointer-events: all;
   cursor: pointer;
-  background-color: #30394C;
+  background-color: #3c50fc;
   color: #fff;
   border-radius: 5px;
   border: 1px solid #fff;
@@ -256,7 +324,7 @@ ul {
   font-weight: 50;
 }
 
-#startGame{
+#startGame1{
   width: 90%;
   font-size: 22px;
   margin: 10px 0px;
@@ -272,7 +340,7 @@ ul {
   font-weight: 50;
 }
 
-#restartGame{
+#restartGame1{
   width: 90%;
   font-size: 22px;
   margin: 10px 0px;
@@ -337,4 +405,140 @@ ul {
 
 .uopLogo{
   width: 100px;
+}
+
+.timerContainer{
+  font-size: 32px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.scoreContainer{
+  font-size: 32px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.col-sm-3{
+  height: 100vh;
+  padding: 0;
+}
+
+#stroopGameArticle{
+  min-width: 350px;
+}
+
+#controlWord{
+  visibility: hidden;
+  font-size: 6em;
+}
+
+#controlWordContainer{
+  border: solid 1px #3d50fc;
+  padding: 2% 5%;
+  margin-bottom: 2%;
+}
+
+#variableWord{
+  visibility: hidden;
+  font-size: 6em;
+}
+
+#variableWordContainer{
+  border: solid 1px #fc3d49;
+  border: solid 1px;
+  padding: 2% 5%;
+  margin-bottom: 2%;
+}
+
+#matchButton{
+  flex-grow: 1;
+  width: 100%;
+  font-size: 2em;
+  margin-bottom: 2%;
+}
+
+#noMatchButton{
+  flex-grow: 1;
+  width: 100%;
+  font-size: 2em;
+}
+
+#headerGame2{
+  color: #fff;
+  background-color: #53FD58;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+  padding: 0px 10px;
+}
+
+#outer-col-1Game2{
+  background: #53FD58;
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  padding: 50px 15px;
+  justify-content: space-evenly;
+  box-shadow: inset -2px 0px 7px #2F394D;
+  height: 100vh;
+  background-image: url(images/bk7.png);
+}
+
+#homeButton2{
+  text-decoration: none;
+  font-size: 22px;
+  pointer-events: all;
+  cursor: pointer;
+  background-color: #53FD58;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4), 0 2px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 12% 0%;
+}
+
+#startGame2{
+  width: 90%;
+  font-size: 22px;
+  margin: 10px 0px;
+  height: 15%;
+  background-color: #E0E4F8;
+  color: #cccccc;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4), 0 2px 2px rgba(0, 0, 0, 0.2);
+  font-family: FredokaOne-Regular;
+  font-weight: 50;
+}
+
+#restartGame2{
+  width: 90%;
+  font-size: 22px;
+  margin: 10px 0px;
+  height: 15%;
+  pointer-events: none;
+  cursor: default;
+  background-color: #E0E4F8;
+  color: #cccccc;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4), 0 2px 2px rgba(0, 0, 0, 0.2);
+  font-family: FredokaOne-Regular;
+  font-weight: 50;
+}
+
+#asideGame2{
+  background-color: #53FD58;
+  color: #fff;
+  display: block;
+  width: 45%;
+  float: right;
+  font-family: monospace;
+  font-size: 18px;
+  height: 100vh;
 }
